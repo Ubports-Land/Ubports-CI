@@ -22,7 +22,7 @@ jobs:
 
     env:
       VENDOR: xiaomi
-      DEVICE: rolex
+      DEVICE: land
       ANDROID_ROOT: /home/runner/work/halium/
 
     steps:
@@ -48,7 +48,7 @@ jobs:
         mkdir -p ~/bin
         wget 'https://storage.googleapis.com/git-repo-downloads/repo' -P ~/bin
         chmod +x ~/bin/repo
-        git config --global user.name "UBports Redmi 4A CI"
+        git config --global user.name "UBports Redmi 3X/S/SP CI"
         git config --global user.email "thisemaildoesnotexist@exist.com"
 
     - name: Downloading source code
@@ -71,22 +71,22 @@ jobs:
       uses: actions/upload-artifact@master
       with:
         name: hybris-boot image
-        path: /home/runner/work/halium/out/target/product/rolex/hybris-boot.img
+        path: /home/runner/work/halium/out/target/product/land/hybris-boot.img
 
     - name : Upload boot image
       uses: actions/upload-artifact@master
       with:
         name: halium-boot image
-        path: /home/runner/work/halium/out/target/product/rolex/halium-boot.img
+        path: /home/runner/work/halium/out/target/product/land/halium-boot.img
 
     - name : Upload recovery image
       uses: actions/upload-artifact@master
       with:
         name: Recovery image
-        path: /home/runner/work/halium/out/target/product/rolex/recovery.img
+        path: /home/runner/work/halium/out/target/product/land/recovery.img
 
     - name : Upload system image
       uses: actions/upload-artifact@master
       with:
         name: System image
-        path: /home/runner/work/halium/out/target/product/rolex/system.img
+        path: /home/runner/work/halium/out/target/product/land/system.img
