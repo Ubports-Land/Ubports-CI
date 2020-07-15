@@ -49,7 +49,7 @@ jobs:
         wget 'https://storage.googleapis.com/git-repo-downloads/repo' -P ~/bin
         chmod +x ~/bin/repo
         git config --global user.name "UBports Redmi 3X/S/SP CI"
-        git config --global user.email "thisemaildoesnotexist@exist.com"
+        git config --global user.email "kmd36rk@gmail.com"
 
     - name: Downloading source code
       run: |
