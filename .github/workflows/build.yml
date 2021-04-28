@@ -63,6 +63,7 @@ jobs:
     
     - name: Build HAL
       run: |
+        apt purge python3.6
         chmod +x build-hal.sh
         bash -x build-hal.sh
       shell: bash
