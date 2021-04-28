@@ -33,7 +33,7 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y \
-        openjdk-8-jdk android-tools-adb bc \
+        openjdk-8-jdk android-tools-adb bc python3.6 \
         bison build-essential curl flex g++-multilib \
         gcc-multilib gnupg gperf imagemagick lib32ncurses5-dev \
         lib32readline-dev lib32z1-dev libesd0-dev liblz4-tool \
@@ -67,13 +67,13 @@ jobs:
         bash -x build-hal.sh
       shell: bash
     
-    - name : Upload boot image
+    - name : Upload hybriss-boot image
       uses: actions/upload-artifact@master
       with:
         name: hybris-boot image
         path: /home/runner/work/halium/out/target/product/land/hybris-boot.img
 
-    - name : Upload boot image
+    - name : Upload halium-boot image
       uses: actions/upload-artifact@master
       with:
         name: halium-boot image
