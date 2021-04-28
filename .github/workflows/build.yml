@@ -33,7 +33,7 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y \
-        openjdk-8-jdk android-tools-adb bc python3.6 \
+        openjdk-8-jdk android-tools-adb bc python3 \
         bison build-essential curl flex g++-multilib \
         gcc-multilib gnupg gperf imagemagick lib32ncurses5-dev \
         lib32readline-dev lib32z1-dev liblz4-tool \
@@ -64,7 +64,7 @@ jobs:
     - name: Build HAL
       run: |
         sudo apt update
-        sudo apt autoremove python3.6 -y
+        sudo apt autoremove python3 -y
         chmod +x build-hal.sh
         bash -x build-hal.sh
       shell: bash
