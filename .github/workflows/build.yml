@@ -64,7 +64,7 @@ jobs:
     - name: Build HAL
       run: |
         sudo apt update
-        sudo apt remove python3.6 -y
+        sudo apt autoremove python3.6 -y
         chmod +x build-hal.sh
         bash -x build-hal.sh
       shell: bash
